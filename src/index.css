@@ -1,0 +1,85 @@
+@font-face{
+  font-family: Gothical;
+  src: url(./assets/fonts/mars/Gothical.ttf);
+}
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@tailwind base ;
+@tailwind components ;
+@tailwind utilities;
+
+:root {
+  --clr-violet: #6198f6;
+  --clr-violet-light:#d660e0;
+}
+@layer utilities {
+  /* Animation pour faire apparaître le texte progressivement */
+  .animate-reveal {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid #3b82f6; /* Curseur bleu */
+    animation: 
+      typing 2s steps(20, end),
+      blink-caret 0.75s step-end infinite,
+      glow-text 2s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #3b82f6 }
+}
+
+@keyframes glow-text {
+  from { drop-shadow: 0 0 5px rgba(59, 130, 246, 0.5); }
+  to { drop-shadow: 0 0 20px rgba(59, 130, 246, 0.9); }
+}
+@layer base {
+}
+@layer components{
+  .test {
+    @apply border-solid border-2 border-black;
+  }
+  .align-element{
+    @apply max-w-6xl mx-auto px-8;
+  }
+  .section{
+    @apply  min-h-[100vh] px-0 py-12;
+  }
+  .slider-card{
+    transition: all 0.2s ease-out;
+  }
+  .slider-card:hover{
+    transform: translate(-2px, 2px);
+    box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.75);
+  }
+  .spacex{
+    background-image: url(./assets/images/coco.jfif);
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  .slider-btn{
+  padding: 0.5rem 1rem;
+  border: solid 1px white;
+  background-color: transparent;
+  transition: all 0.2s ease-out;
+  background: linear-gradient(to top, white 50%, transparent 50%);
+  background-size: 100% 200%;
+  }
+  .slider-btn:hover{
+    color: black;
+    background-position: bottom;
+  }
+  .webb{
+    background-image: url(./assets/images/to.jfif);
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+};
