@@ -6,10 +6,10 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  base: './', // <--- Indispensable pour éviter les erreurs 404
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
 })
-
