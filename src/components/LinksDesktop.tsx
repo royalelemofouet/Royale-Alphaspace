@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const LinksDesktop = () => {
   return (
-    <nav className="hidden lg:flex w-full sticky top-[64px] z-40 bg-gradient-to-r from-black via-blue-900 to-black py-4 border-t border-white/10 shadow-xl justify-center items-center text-white">
+    <nav className="flex w-full sticky top-[64px] z-40 bg-gradient-to-r from-black via-blue-900 to-black py-4 border-t border-white/10 shadow-xl justify-center items-center text-white">
       <div className="flex gap-x-[3em] items-center">
         {links.map((link) => {
           const { ref, label } = link as Link;

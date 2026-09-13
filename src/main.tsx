@@ -12,6 +12,7 @@ import { SpacexPageLoader } from './pages/Spacex';
 import { LandingPageLoader } from './pages/Landing';
 import { SingleHubblePageLoader } from './pages/SingleHubble';
 import { LoadingScreen } from './components';
+
 const router = createBrowserRouter([
   {
 path: "/",

@@ -33,9 +33,9 @@ const RocketCard = ({ rocket, index }: {rocket: Rocket, index: number}) => {
         {rocket_name}
         </CardTitle>
         <CardDescription>
-            <img src={flickr_images[0]} 
-            alt="card-pic" 
-            className="w-full h-full object-cover"/>
+            <img src={flickr_images[0]}
+            alt="card-pic"
+            className="w-full h-56 sm:h-72 object-cover rounded-lg"/>
         </CardDescription>
       </CardHeader>
       <CardContent className={ `order-2 ${getOrderClasses().content}`} > 
@@ -56,7 +56,7 @@ const RocketCard = ({ rocket, index }: {rocket: Rocket, index: number}) => {
         </p>
         <p className="mt-2">Payloads:</p>
         {payload_weights.map((payload) => (
-         <p>{payload.name}
+         <p key={payload.name}>{payload.name}
             <span>{payload.kg}</span>kgs
         </p>
         ))}

@@ -48,10 +48,10 @@
     @apply border-solid border-2 border-black;
   }
   .align-element{
-    @apply max-w-6xl mx-auto px-8;
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
   }
   .section{
-    @apply  min-h-[100vh] px-0 py-12;
+    @apply min-h-[100vh] px-4 sm:px-6 lg:px-8 py-8 sm:py-12;
   }
   .slider-card{
     transition: all 0.2s ease-out;

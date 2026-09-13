@@ -46,7 +46,7 @@ const Footer = () => {
 
         {/* Informations complémentaires (Texte statique pour les mots inconnus) */}
         <div className="mt-6 flex flex-col items-center text-xs text-blue-400/60 uppercase tracking-[0.2em]">
-          <p>Stage Académique - Projet AlphaSpace</p>
+          <p>Stage Académique - Projet Royale AlphaSpace</p>
           <p className="mt-1">Développement & Innovation</p>
         </div>
 

@@ -1,4 +1,4 @@
-import { Footer, Navbar, Header } from "@/components";
+import { Footer, Header } from "@/components";
 import { useEffect } from "react";
 import { Outlet, useLocation} from "react-router-dom";
 
@@ -11,7 +11,6 @@ const HomeLayout = () => {
   return (
     <>
      <Header />
-     <Navbar />
      <Outlet />
      <Footer />
     </>

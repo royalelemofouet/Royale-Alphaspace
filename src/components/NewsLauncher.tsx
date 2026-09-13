@@ -10,7 +10,6 @@ const NewsLauncher = () =>{
     <article className="w-full py-12">
       <div className="align-element h-full">
         <NewsLauncherHeader />
-        //NewsLauncherSquaredCards
         { news && <NewsLauncherSquaredCards news={news}/>}
         { news && <NewsLauncherBubbledCards news={news}/> }
       </div>

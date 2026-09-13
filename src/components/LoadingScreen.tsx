@@ -1,4 +1,4 @@
-// Crée un fichier components/LoadingScreen.tsx ou mets-le directement dans ton main.tsx
+
 const LoadingScreen = () => {
   return (
     <div className="fixed inset-0 flex flex-col items-center justify-center bg-black z-[9999]">

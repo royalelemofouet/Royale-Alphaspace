@@ -27,25 +27,25 @@ const ApodPlayer = ({ apod, day, setDay, isLoading} : ApodPlayerProps) => {
   };
   return (
     <>
-      <div className="w-full mx-auto flex justify-between"> 
-        <button onClick={nextHandler} className="mx-4" disabled={day===0}>
-          <CircleChevronLeft 
-          size={36} 
-          className={`transition-all text-[--clr-violet-light] ${day !== 0 ? "hover:scale-110 hover:text-[--clr-violet]":""}`}
+      <div className="w-full mx-auto flex items-center gap-2 sm:gap-4">
+        <button onClick={nextHandler} className="shrink-0" disabled={day===0}>
+          <CircleChevronLeft
+          size={28}
+          className={`sm:size-9 transition-all text-[--clr-violet-light] ${day !== 0 ? "hover:scale-110 hover:text-[--clr-violet]":""}`}
           />
         </button>
-      {!isLoading ? (<div className="h-[400px] w-full">
+      {!isLoading ? (<div className="h-[220px] sm:h-[320px] lg:h-[400px] w-full">
             {media_type === "video" ? (
-              <iframe height="100%" width="100%" src={url} ></iframe> )  : ( 
-            <img src={url} alt={title} className="w-full h-full object-cover" /> 
+              <iframe height="100%" width="100%" src={url} className="w-full h-full"></iframe> )  : (
+            <img src={url} alt={title} className="w-full h-full object-cover rounded-lg" />
         )}
-        </div>) : (<div className="h-[400px] w-full grid place-content-center ">
+        </div>) : (<div className="h-[220px] sm:h-[320px] lg:h-[400px] w-full grid place-content-center ">
            <p> Is Loading...</p>
         </div>)}
-        <button onClick={prevHandler}>
-          <CircleChevronRight 
-          size={36}
-          className="transition-all text-[--clr-violet-light] hover:scale-110 hover:text-[--clr-violet]"/>
+        <button onClick={prevHandler} className="shrink-0">
+          <CircleChevronRight
+          size={28}
+          className="sm:size-9 transition-all text-[--clr-violet-light] hover:scale-110 hover:text-[--clr-violet]"/>
         </button>
       </div>
       <div className="capitalize text-center text-2xl"> {date}</div>
