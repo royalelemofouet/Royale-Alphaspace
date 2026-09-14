@@ -1,6 +1,5 @@
 @font-face{
   font-family: Gothical;
-  src: url(./assets/fonts/mars/Gothical.ttf);
 }
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -60,11 +59,7 @@
     transform: translate(-2px, 2px);
     box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.75);
   }
-  .spacex{
-    background-image: url(./assets/images/coco.jfif);
-    background-position: 50% 50%;
-    background-size: cover;
-  }
+
   .slider-btn{
   padding: 0.5rem 1rem;
   border: solid 1px white;
@@ -77,9 +72,21 @@
     color: black;
     background-position: bottom;
   }
-  .webb{
-    background-image: url(./assets/images/to.jfif);
-    background-position: 50% 50%;
-    background-size: cover;
-  }
+
+
+  @font-face{
+  font-family: Gothical;
+  src: url(/assets/fonts/mars/Gothical.ttf); /* Retirer le point */
+}
+/* ... dans .spacex et .webb : */
+.spacex{
+  background-image: url(/assets/images/coco.jfif); /* Retirer le point */
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.webb{
+  background-image: url(/assets/images/to.jfif); /* Retirer le point */
+  background-position: 50% 50%;
+  background-size: cover;
+}
 };

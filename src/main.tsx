@@ -14,37 +14,23 @@ import { LoadingScreen } from './components';
 
 const router = createBrowserRouter([
   {
-path: "/",
+    path: "/",
     element: <HomeLayout/>,
     errorElement: <ErrorMain />,
-    // REMPLACEMENT ICI
     hydrateFallbackElement: <LoadingScreen/>, 
     children: [
-  {index: true, element: <Landing/>, loader: LandingPageLoader, errorElement: <ErrorElement/>},
-  {path: "news", element:<News/>, loader: NewsPageLoader, errorElement: <ErrorElement/> },
-
-  {path: "webb", element:<Webb/>, loader: WebbPageLoader, errorElement: <ErrorElement/>},
-
-  {path: "spacex",
-     element:<Spacex/>, 
-     loader: SpacexPageLoader, 
-     errorElement: <ErrorElement/>},
-
-  {path: "hubble", 
-    element:<Hubble/>,
-    loader: HubblePageLoader, 
-    errorElement: <ErrorElement/>},
-
-  {path: "apod", element:<Apod/>,  loader: ApodPageLoader, errorElement: <ErrorElement/>},
-{
-  path: "hubble/:id",
-  element: <SingleHubble />,
-  loader: SingleHubblePageLoader,
-  errorElement: <ErrorElement />,
-},
-],
-},
-]);
+      {index: true, element: <Landing/>, loader: LandingPageLoader, errorElement: <ErrorElement/>},
+      {path: "news", element:<News/>, loader: NewsPageLoader, errorElement: <ErrorElement/> },
+      {path: "webb", element:<Webb/>, loader: WebbPageLoader, errorElement: <ErrorElement/>},
+      {path: "spacex", element:<Spacex/>, loader: SpacexPageLoader, errorElement: <ErrorElement/>},
+      {path: "hubble", element:<Hubble/>, loader: HubblePageLoader, errorElement: <ErrorElement/>},
+      {path: "apod", element:<Apod/>, loader: ApodPageLoader, errorElement: <ErrorElement/>},
+      {path: "hubble/:id", element: <SingleHubble />, loader: SingleHubblePageLoader, errorElement: <ErrorElement />},
+    ],
+  },
+], {
+  basename: "/Royale-Alphaspace" 
+});
 
 createRoot(document.getElementById('root')!).render(<RouterProvider router={router}/>);
  
